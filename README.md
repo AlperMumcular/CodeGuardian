@@ -1,17 +1,27 @@
 # CodeGuardian
- 
-CodeGuardian: Real-Time On-Device AI for Comprehensive Code Security
 
-In a world where cybersecurity threats evolve at an alarming pace, developers face a critical challenge to identify and resolve vulnerabilities before they become exploits. Traditional cloud-based vulnerability scanners pose significant risks, including potential data breaches and scalability challenges for mobile and IoT development. CodeGuardian is a solution that eliminates these limitations by using on-device AI to deliver real-time, private, and autonomous vulnerability detection and remediation.
+## What is CodeGuardian?
 
-CodeGuardian will perform local, in-depth scans of codebases, identifying vulnerabilities with a detailed report of identified vulnerabilities. It will also provide actionable remediation suggestion. This will allow developers to resolve security issues directly within their development environment.
+**CodeGuardian** is a real-time, on-device AI-powered tool designed for comprehensive code security. It eliminates the limitations of traditional cloud-based vulnerability scanners by providing a local, in-depth scan of your codebase. CodeGuardian identifies security vulnerabilities and offers actionable remediation suggestions directly within your development environment.
 
-Using LM Studio's on-device AI, CodeGuardian will provide instant feedback on developers’ code. This real-time protection will significantly reduce the time between vulnerability introduction and remediation and ensure secure code from the development point of view.
+Built using LM Studio's on-device AI, CodeGuardian ensures developers get instant feedback on their code, reducing the time between vulnerability introduction and remediation. This approach is ideal for industries with stringent data security requirements, such as defense, healthcare, and critical infrastructure, where cloud solutions may not be viable.
 
-Unlike cloud-based tools, CodeGuardian will operate entirely on-device, maintaining full functionality even in offline environments. This makes it ideal for industries with strict data security requirements, such as defense, healthcare, and critical infrastructure, where cloud solutions are often prohibited.
+Unlike cloud-based tools, CodeGuardian operates entirely offline, ensuring security and privacy by processing code locally on your device. Additionally, it periodically syncs with trusted vulnerability databases like CVE, NVD, and OWASP to update its threat models, ensuring that your code stays protected against emerging threats.
 
-CodeGuardian will periodically sync with trusted vulnerability databases like CVE, NVD, and OWASP. This will update its threat models without requiring constant internet connectivity.
+With its energy-efficient design, CodeGuardian is optimized for use on resource-constrained platforms, making it especially useful for mobile and IoT developers.
 
-It will demonstrate exceptional energy efficiency and performance , designed to run seamlessly on resource-constrained platforms, making it a very useful tool for mobile and IoT developers.
+## Setup
 
-For future scope we aim to extend its capabilities to web-based applications through an AI-powered web agent running natively.
+To get started with CodeGuardian, follow the instructions below:
+
+### Prerequisites
+- Ensure your development environment meets the following requirements:
+  - Supported Operating Systems: Windows, macOS, or Linux
+  - Python 3.7+ (or equivalent programming language as required by your project)
+  - Dependencies installed (e.g., AI libraries, security databases)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repository/codeguardian.git
+   cd codeguardian
