@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>GitHub Repo or Local Path</title>
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent form from reloading the page
+            const inputPath = document.getElementById("pathInput").value; // Get user input
+            const url = `http://127.0.0.1:8000/submit/${encodeURIComponent(inputPath)}/`; // Create dynamic URL
+            
+            // Send POST request
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ path: inputPath })
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text();
+                }
+                throw new Error("Failed to submit path. Status: " + response.status);
+            })
+            .then(data => {
+                alert("Response from server: " + data);
+            })
+            .catch(error => {
+                alert("Error: " + error.message);
+            });
+        }
+    </script>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <h1>Submit GitHub Repo URL or Local Path</h1>
+    <form onsubmit="submitForm(event)">
+        <label for="pathInput">Enter GitHub Repo URL or Local Path:</label>
+        <input type="text" id="pathInput" name="path" placeholder="Enter here" required>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>

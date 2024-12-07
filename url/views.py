@@ -11,6 +11,7 @@ def generate_report(request, path):
     if request.method == 'POST':
         ##Some function here##
         # TODO 
+        
         return HttpResponse(f"Report generated for: {path}", status=200)
 
     return HttpResponse("Invalid Request", status=400)
