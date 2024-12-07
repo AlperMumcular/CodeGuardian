@@ -25,3 +25,9 @@ To get started with CodeGuardian, follow the instructions below:
    ```bash
    git clone https://github.com/your-repository/codeguardian.git
    cd codeguardian
+
+## Contributors
+- Alper Mumcular
+- Abhinav Gupta
+- Dhairyasheel Patil
+- Sahil Sarnaik
