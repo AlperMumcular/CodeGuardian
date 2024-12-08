@@ -4,8 +4,7 @@ from .hackathon import get_local_file_and_content, get_github_file_and_content
 import os
 from dotenv import load_dotenv
 from on_device_requests import get_response_on_device
-from aggregate import aggregate
-
+from aggregate import aggregate, delete_results
 
 load_dotenv()
 
@@ -57,6 +56,9 @@ def analyze_code_with_claude(file_path, content, reports_base):
 
 # Main function to integrate local or GitHub content
 def main():
+    # Delete results folder if it exists
+    delete_results()
+
     source_type = input("Choose source type (local/github): ").strip().lower()
 
     try:

@@ -29,14 +29,16 @@ def aggregate(result=""):
     except Exception as e:
         print(f"Error writing to '{output_file}': {e}")
 
-    # Delete the 'report' folder
-    try:
-        shutil.rmtree(report_dir)
-        print(f"Deleted '{report_dir}' folder.")
-    except Exception as e:
-        print(f"Error deleting '{report_dir}': {e}")
-
     return result
 
-# Call the function
-aggregated_result = aggregate()
+def delete_results():
+    report_dir = "results"
+    if os.path.exists(report_dir):
+        try:
+            shutil.rmtree(report_dir)
+            print(f"Deleted '{report_dir}' folder.")
+        except Exception as e:
+            print(f"Error deleting '{report_dir}': {e}")
+    else:
+        print(f"'{report_dir}' folder does not exist.")
+
