@@ -3,6 +3,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from .hackathon import get_local_file_and_content, get_github_file_and_content
 import os
 from dotenv import load_dotenv
+from on_device_requests import get_response_on_device
 
 load_dotenv()
 
@@ -35,6 +36,7 @@ def analyze_code_with_claude(file_path, content, reports_base):
 
         # Get response from Claude
         response = Claude_model.invoke(prompt)
+        #response=get_response_on_device(prompt)
 
         # Save the report as a Markdown file maintaining the folder structure
         relative_path = file_path.replace(os.path.sep, "/")
