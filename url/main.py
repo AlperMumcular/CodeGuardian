@@ -4,6 +4,8 @@ from .hackathon import get_local_file_and_content, get_github_file_and_content
 import os
 from dotenv import load_dotenv
 from on_device_requests import get_response_on_device
+from aggregate import aggregate
+
 
 load_dotenv()
 
@@ -81,6 +83,8 @@ def main():
         for file_path, content in file_content_dict.items():
             print(f"Analyzing {file_path}...")
             analyze_code_with_claude(file_path, content, reports_base)
+        
+        document = aggregate()
 
     except Exception as e:
         print(f"Error: {e}")

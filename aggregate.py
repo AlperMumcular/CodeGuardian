@@ -40,4 +40,3 @@ def aggregate(result=""):
 
 # Call the function
 aggregated_result = aggregate()
-#print(aggregated_result[:100])
